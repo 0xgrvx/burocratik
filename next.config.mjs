@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: '/burocratik', output: 'export', images: { unoptimized: true, },};
+  basePath: process.env.NODE_ENV === 'production' ? '/burocratik' : '', output: 'export', images: { unoptimized: true, },};
 
 export default nextConfig;
